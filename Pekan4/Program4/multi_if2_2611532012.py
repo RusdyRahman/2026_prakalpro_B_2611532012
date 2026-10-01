@@ -33,7 +33,7 @@ if kode_promo_valid_2012:
 nominal_diskon_2012 = total_belanja_2012 * (total_diskon_persen_2012 / 100)
 total_bayar_2012 = total_belanja_2012 - nominal_diskon_2012
 
-# Outputa Hasil
+# Output Hasil
 print("\n=== Rincian Pembayaran ===")
 print(f"Total Diskon : {total_diskon_persen_2012}% (Rp {nominal_diskon_2012:,.0f})")
 print(f"Total Bayar  : Rp {total_bayar_2012:,.0f}")

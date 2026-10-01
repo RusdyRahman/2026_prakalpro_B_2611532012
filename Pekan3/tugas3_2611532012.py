@@ -11,7 +11,7 @@ total_belanja_2012 = int(input("Masukkan Total Belanja :"))
 total_barang_2012 = int(input("Masukkan Total Barang : "))
 kode_promo_2012 = input("Masukkan Kode Promo :")
 print(" ")
-# Cek Validasi (Operator Perbandingan)
+# Cek Validasi (Operator Perbandingan, Operator Keanggotaan, dan Operator Logika)
 print("\n=== HASIL VALIDASI ===")
 # Menggunakan Operator perbandingan lebih besar dari atau sama dengan (=)
 belanja_cukup_2012 = total_belanja_2012 >= 200000
@@ -51,14 +51,14 @@ print("Total Pembayaran :", "Rp", int(total_pembayaran_2012) )
 print("Rata - Rata Harga Barang :", "Rp", int(rata2_barang_2012))
 print(" ")
 print("\n=== HAK AKSES===")
-# Flag Bit untuk kode akses 
-free_shipping_2012 = total_pembayaran_2012 >= 200000
-Member_2012 = 1 
-Diskon_2012 = 2
-Free_shipping_2012 = 4
-Promo_2012 = 8
-# Menentukan nilai kode akses dengan menggunakan operator assignment (|=)
+# Flag angka untuk masing masing kode
+free_shipping_2012 = total_pembayaran_2012 >= 250000
+Member_2012 = 0b0001 #1 
+Diskon_2012 = 0b0010 #2
+Free_shipping_2012 = 0b0100 #4
+Promo_2012 = 0b1000 #8
 kode_akses_2012 = 0
+# Menentukan nilai kode akses dengan menggunakan operator assignment (|=)
 if member_2012:
    kode_akses_2012 |= Member_2012
 if dapat_diskon_2012:
@@ -67,7 +67,7 @@ if free_shipping_2012:
    kode_akses_2012 |= Free_shipping_2012
 if dapat_promo_2012 :
    kode_akses_2012 |= Promo_2012
-# Menampilkan kode 4 bit dari kode akses dan juga menampilkan apakah pernyataan tersebut benar atau salah menggunakan tipe data boolean
+# Menampilkan kode 4 bit dari kode akses dan juga menampilkan apakah user tersebut mendapat benefit lainnya menggunakan tipe data boolean
 print("Kode Hak Akses   :", format(kode_akses_2012, "04b"))
 print("Member Access    :", bool(kode_akses_2012 & Member_2012))
 print("Diskon Access    :", bool(kode_akses_2012 & Diskon_2012))
@@ -110,3 +110,5 @@ hasil_biner_2012 = kode_akses_2012 ^ kode_referensi_2012
 print(format(kode_akses_2012 ^ kode_referensi_2012,"04b"))
 print("Hasil Biner :", format(hasil_biner_2012,"04b"))
 print("Hasil desimal :", hasil_biner_2012)
+print(" ")
+print("\n=== Selesai===")

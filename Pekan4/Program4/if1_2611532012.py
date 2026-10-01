@@ -7,5 +7,4 @@ ipk_2012 = float(input("Input IPK Anda : "))
 if ipk_2012 > 2.75:
     print("Anda Lulus dengan nilai Memuaskan dengan IPK " + str(ipk_2012))
 
-
 print("Program Selesai")
