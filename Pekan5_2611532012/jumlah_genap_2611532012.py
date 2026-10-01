@@ -14,6 +14,6 @@ for i_2012 in range(1, ulang_2012 + 1):
         if  i_2012 < ulang_2012:
             print(" + ", end="")
         else:
-            print(" = ", end="")
+            print(" = ", jumlah_2012, end="")
 print()
 print("Jumlah =", jumlah_2012)

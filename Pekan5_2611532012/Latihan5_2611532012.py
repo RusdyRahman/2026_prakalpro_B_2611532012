@@ -9,4 +9,4 @@ for i_2012 in range(1, tinggi_2012 + 1):
     # Cetak spasi di awal baris
     print(" " * (tinggi_2012 - i_2012), end="")
     # Cetak bintang diikuti spasi
-    print("*" * i_2012)
+    print("* " * i_2012)
