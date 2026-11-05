@@ -1,12 +1,12 @@
 total = 0
 
 while True:
-    bil = int(input("Enter a number: "))
-    if bil < 0:
+    number = int(input("Enter a number: "))
+    if number < 0:
         break
-    if bil == 0:
+    if number == 0:
         continue
-    print("Positive number:", bil)
-    total += bil
+    print("Positive number:", number)
+    total += number
 
 print("Total:", total)
