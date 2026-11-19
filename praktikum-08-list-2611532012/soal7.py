@@ -1,14 +1,12 @@
 menus = ["Nasi Goreng", "Mie Ayam", "Soto"]
 number_of_days = 3
-sales = []
+d = 2 
+sales = [
+    [15, 12, 12 ],
+    [13, 14, 10 ],
+    [12, 12, 10 + d]
+]
 # Write your code below
-
-for day in range(number_of_days):
-    row = []
-    for menu in menus:
-      portion = int(input(f"Day {day + 1}, {menu}:"))
-      row.append(portion)
-    sales.append(row)
 
 print("Total per Day")
 for i in range(number_of_days):
