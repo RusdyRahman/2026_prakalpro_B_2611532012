@@ -1,11 +1,10 @@
 LAST_DIGIT = 2  # change to the last digit of your NIM
 daily_limit = 30000 + LAST_DIGIT * 1000
-expenses = []
+expenses = [ 31500, 42000, 33500, 36500, 29000, 38500, 34500]
 # Write your code below
 
-for day in range(1,8):
-    expenses.append(int(input(f"Day{day}:")))
-
+for i in range (len(expenses)):
+   print(f"Day{i+1}: {expenses[i]}")
 total = 0
 highest = expenses[0]
 days_above = 0
