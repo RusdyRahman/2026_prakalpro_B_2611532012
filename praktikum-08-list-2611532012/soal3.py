@@ -7,5 +7,4 @@ for i in range(len(temperatures)):
     if temperatures[i] < lowest:
         lowest = temperatures[i]
 print("Highest:", highest)
-
 print("Lowest:", lowest)
